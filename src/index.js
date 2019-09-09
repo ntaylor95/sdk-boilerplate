@@ -6,7 +6,7 @@ module.exports = {
         post: widget1Service.post
     },
     widget2: {
-        get: widget2Service.getById,
+        get: widget2Service.get,
         post: widget2Service.post
     }
 };
