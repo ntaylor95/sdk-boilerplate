@@ -4,7 +4,7 @@ import '@babel/polyfill';
 const post = async (id, title, locale = 'en-US') => {
     const body = {
         id,
-        title,
+        title
     };
 
     console.log(`PostComment body = ${JSON.stringify(body)}`);
@@ -12,7 +12,7 @@ const post = async (id, title, locale = 'en-US') => {
     const url = 'some/endpoint';
     const headers = {
         'Accept': 'application/json',
-        'Accept-Language': locale,
+        'Accept-Language': locale
     };
 
     const response = await clientPost(url, body, headers);

@@ -27,4 +27,4 @@ const post = async (id, acceptLanguage ) => {
 export {
     get,
     post
-}
+};

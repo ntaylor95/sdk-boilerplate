@@ -29,7 +29,7 @@ async function get(relativeUrl, headers = {}) {
     headers['X-Api-Key'] = apiKey;
     const response = await request({
         uri: url,
-        headers: headers,
+        headers: headers
     });
 
     return response;
