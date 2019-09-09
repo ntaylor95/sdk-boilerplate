@@ -1,24 +1,30 @@
-const client = require('./client');
+import { get as clientGet, post as clientPost } from './fakeClient';
+import '@babel/polyfill';
 
-module.exports.get = async (id) => {
+const get = async (id) => {
     const url = `some/data/${id}`;
     const headers = {
         'Accept': 'application/json'
     };
 
-    const response = await client.post(url, headers);
+    const response = await clientGet(url, headers);
   
     return response;
 };
 
-module.exports.post = async (id, acceptLanguage ) => {
+const post = async (id, acceptLanguage ) => {
     const url = `some/${id}/action`;
     const headers = {
         Accept: 'application/json',
         'Accept-Language': acceptLanguage
     }; 
 
-    const response = await client.post(url, headers);
+    const response = await clientPost(url, headers);
     
-    return JSON.parse(response);
+    return response;
 };
+
+export {
+    get,
+    post
+}

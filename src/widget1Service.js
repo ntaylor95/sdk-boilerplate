@@ -1,6 +1,7 @@
-const client = require('./client');
+import {post as clientPost} from './fakeClient';
+import '@babel/polyfill';
 
-module.exports.post = async (id, title, locale = 'en-US') => {
+const post = async (id, title, locale = 'en-US') => {
     const body = {
         id,
         title,
@@ -14,7 +15,11 @@ module.exports.post = async (id, title, locale = 'en-US') => {
         'Accept-Language': locale,
     };
 
-    const response = await client.post(url, body, headers);
+    const response = await clientPost(url, body, headers);
   
     return response;
+};
+
+export {
+    post
 };

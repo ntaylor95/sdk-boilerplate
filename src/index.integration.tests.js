@@ -1,16 +1,16 @@
-const index = require('../src/index');
-const casual = require('casual');
+import { widget1Post, widget2Post, widget2Get } from '../src/index';
+import casual from 'casual';
 
 describe('integration tests', () => {
-    it.skip('Post to Widget 1', async () => {
-        await index.widegt1.post(79601408, casual.sentence);
+    it('Post to Widget 1', async () => {
+        await widget1Post(79601408, casual.sentence);
     }, 15000);
   
-    it.skip('POST to Widget 2', async () => {
-        await index.widget2.post(83197445);
+    it('POST to Widget 2', async () => {
+        await widget2Post(83197445);
     }, 15000);
   
-    it.skip('Get Widget Html', async () => {
-        await index.widget2.get(456252456);
+    it('Get Widget Html', async () => {
+        await widget2Get(456252456);
     }, 15000);
 });

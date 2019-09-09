@@ -1,4 +1,4 @@
-const request = require('request-promise-native');
+import request from 'request-promise-native';
 
 let baseUrl;
 
@@ -52,7 +52,7 @@ async function post(relativeUrl, body, headers = {}) {
     return response;
 }
 
-module.exports = {
-    get: get,
-    post: post
+export {
+    get,
+    post
 };
