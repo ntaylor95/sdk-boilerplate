@@ -44,7 +44,7 @@
     "jest": "^24.8.0",
     "nodemon": "^1.19.2",
     "pre-commit": "^1.2.2",
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^17.2.3"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
